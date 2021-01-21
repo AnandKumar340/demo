@@ -17,617 +17,935 @@
 
       <h3>header.php</h3>
       <xmp>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-us">
 <head>
-<link rel="shortcut icon" href="<?php echo (get_bloginfo('stylesheet_directory'). '/images/fav.ico');?>" type="image/x-
-icon">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/webslidemenu.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/slick.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.carousel.min.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css">
-    <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/css/Swiper.css">
+<meta charset="utf-8" />
+<!-- Page Title -->
+<meta name="keywords" content="pasta, responsive, modern html5 template, bootstrap, css3, food, reservation" />
+<meta name="description" content="Pasta - Restaurant HTML5 Responsive Template for Restaurants and food" />
+<meta name="author" content="Colorful Design - www.bycolorfuldesign.com" />
+<title>
+<?php echo get_the_title(); ?> |
+ <?php bloginfo('name') ?>
+</title>
+<!-- Mobile Meta Tag -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fav_touch_icons/favicon.ico" />
+<link rel="apple-touch-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fav_touch_icons/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fav_touch_icons/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/fav_touch_icons/apple-touch-icon-114x114.png" />
+
+<!-- Google Web Font -->
+<link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500,600,700|Dancing+Script:400,700|Great+Vibes|Josefin+Sans:400,400i,600,600i|Libre+Baskerville|Open+Sans:600,600i,700|Oswald:300,400,700|Yellowtail" rel="stylesheet">
+
+<!-- Fonf Awesome -->
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/font-awesome.min.css" />
+<!-- Food Flaticon Font -->
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/food-flaticon.css" />
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/datepiker/css/datepicker.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/bootstrap-progressbar.css" />
+
+<!-- ********************** XPRO Sliders ******************-->
+<!-- HERO Home Slider -->
+<link type="text/css" rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/xpro/slider.css" />
+
+<!-- ********************** Owl Carousel ******************-->
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/owl.carousel.css" />
+
+<!-- Template CSS -->
+<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/css/style.css" />
+<?php wp_head(); ?>
 </head>
-<body>
-    <!-- Mobile Header -->
-    <div class="wsmobileheader clearfix">
-        <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-        <span class="smllogo"><a href="<?php echo home_url('/'); ?>"><img src="http://legaladvisory.org/wp-
-          content/themes/legaladvisory/images/legalraasta.png" alt=""></a></span>
-        <a href="tel:" class="callusbtn"><i class="fa fa-volume-control-phone"></i></a>
-    </div>
-    <!-- Mobile Header -->
-    <div class="wsmainfull clearfix">
-        <div class="wsmainwp clearfix">
-            <div class="desktoplogo"><a href="<?php echo home_url('/'); ?>"><img src="http://legaladvisory.org/wp-
+<body class="home-page" >
+	<div id="pageloader">
+	  <div id="page-loader-box"></div>
+		<div id="pageloadDiv" class="page-animate-bottom"></div>
+	</div>
+	<!--  WRAPPER -->
+	<div id="wrapper">
+	<!-- Mobile menu overlay background -->
+	<div class="overlay" data-image-src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/content/mob-menu-background.jpg"></div>
 
-              content/themes/legaladvisory/images/legalraasta.png" alt=""></a></div>
-            <nav class="wsmenu clearfix">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location'    => 'header',
-                            'menu_class'        => 'wsmenu-list',
-                            'container'         => 'ul',
-                            'before'          => '',
-                            'after'           => '',
-                            // 'items_wrap' => '<ul id="%2$s" class="%2$s">%3$s <div class="wsshoptabing 
+		<!-- BEGIN HEADER -->
+		<header id="header">
+			
 
+			<div id="nav-section">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<!-- From Mobile Logo.png -->
 
-                            // wtsdepartmentmenu clearfix"><div class="wsshopwp clearfix"> </ul>',
-                        )
-                    );
-                    ?>
-                <!-- <li aria-haspopup="true"><a href="#" class="navtext"><span><i class="fa fa-volume-control-phone">
-              </i> 8750008585</span></a></li> -->
-            </nav>
-        </div>
-    </div>
+ 
+							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+							    <label>
+							        <span class="screen-reader-text"><?php echo _x( 'Search for:', 'label' ) ?></span>
+							        <input type="search" class="search-field"
+							            placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>"
+							            value="<?php echo get_search_query() ?>" name="s"
+							            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+							    </label>
+							    <input type="submit" class="search-submit"
+							        value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
+							</form> 
+
+							<button class="nav-mobile-btn is-closed animated fadeInLeft" data-toggle="offcanvas">
+								<span class="hamb-top"></span>
+								<span class="hamb-middle"></span>
+								<span class="hamb-bottom"></span>
+							</button>
+
+							<!-- BEGIN MAIN MENU -->
+							<nav id="nav-mobile" class="navbar">
+								<a href="<?php bloginfo('url'); ?>" class="nav-logo"><?php the_custom_logo(); ?></a>
+								<ul class="nav navbar-nav">
+									<!-- From Nav Logo.png -->
+									
+								  <?php
+				                    wp_nav_menu(
+				                        array(
+				                            'theme_location'    => 'header-menu',
+				                            'menu_class'        => 'wsmenu-list',
+				                            'container'         => 'ul',
+				                            'before'          => '',
+				                            'after'           => '',
+				                        )
+				                    );
+				                    ?>
+								</ul>
+
+							</nav>
+							<!-- END MAIN MENU -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- END HEADER -->
       </xmp>
     </div>
      <div class="container" style="border : 1px solid #000; margin-top : 50px">
       <h3>footer.php</h3>
       <xmp>
+<!--BEGIN FOOTER -->
+		<footer id="footer" class="footer-background">
+			<div id="footer-top" class="container">
+				<div class="row">
+						<div class="block col-sm-3">
+							<?php dynamic_sidebar( 'footer-1' ); ?>
+						</div>
+						<div class="block col-sm-3">
+							<?php dynamic_sidebar( 'footer-2' ); ?>
+						</div>
+						<div class="block col-sm-3">
+							<?php dynamic_sidebar( 'footer-3' ); ?>
+						</div>
+						<div class="block col-sm-3">
+							<?php dynamic_sidebar( 'footer-4' ); ?>
+						</div>
+				</div>
+			</div>
 
-<!-- BEGIN callpage.io widget -->
-<!-- IMPORTANT: Remove script below if you don't need support for older browsers. -->
-<script>(function () {var script = document.createElement('script');script.src = 'https://cdnjs.cloudflare.
+			<!--BEGIN COPYRIGHT -->
+			<div id="copyright">
+				<a href="#" class="scrollTopButton">
+           <span class="button-square">
+               <i class="fa fa-angle-double-up"></i>
+           </span>
+        </a>
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+							<?php dynamic_sidebar( 'copyright' ); ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- END COPYRIGHT -->
+		</footer>
+		<!-- END FOOTER -->
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Libs -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/common/jquery-1.x-git.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/common.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/bootstrap-progressbar.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/owl.carousel.min.js"></script>
 
-  com/ajax/libs/babel-polyfill/6.26.0/polyfill.min.js';script.async = false;document.head.appendChild(script);}())</
-script><script>var __cp = {"id":"ITHT_0vFtlVzKHDLFnCKjbmC_-xzNtXj3hE2nVC6MjE","version":"1.1"};(function (window, 
-  document) {var cp = document.createElement('script');cp.type = 'text/javascript';cp.async = false;cp.src = "++cdn-
-widget.callpage.io+build+js+callpage.js".replace(/[+]/g, '/').replace(/[=]/g, '.');var s = document.getElementsByTagName
-('script')[0];s.parentNode.insertBefore(cp, s);if (window.callpage) {alert('You could have only 1 CallPage code on your
- website!');} else {window.callpage = function (method) {if (method == '__getQueue') {return this.methods;}else if (
- method) {if (typeof window.callpage.execute === 'function') {return window.callpage.execute.apply(this, arguments);}
- else {(this.methods = this.methods || []).push({arguments: arguments});}}};window.callpage.__cp = __cp;window.callpage(
-  'api.button.autoshow');}})(window, document);</script>
+	<!-- Datepiker Script -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/datepiker/js/moment.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/datepiker/js/bootstrap-datepicker.js"></script>
+	<!-- Hero Slide Scripts -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/xpro/js/slider.js"></script>
+	<!-- Template Scripts -->
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/scripts.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/js/contact-mail.js"></script>
 
-<!-- END callpage.io widget -->
-<!--Whatsapp caht icon-->
-<a href="https://api.whatsapp.com/send?phone=1234567890" class="whatsapp" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-<!--Whatsapp caht icon-->
+	<script type="text/javascript">
+		// Hero Slide// --------------------------
+		jQuery(document).ready(
+		    function() {
+		        var slider = new XPRO.Controls.Slider(null);
+		        slider.initSlider("scroller", {
+		                "mode"              : "fade",
+		                "dir"               : "left",
+		                "iniWidth"          : 1200,
+		                "iniHeight"         : 600,
+		                "autoRun"           : true,
+		                "interval"          : 6000,
+		                "autoHeightMode"    : "maintainratio",
+		                "thumbnails"        : null,
+		                "stopOnHover"       : false,
+		                "imageVAlign"       : "bottom",
+		                "showProgress"      : false,
+		                "enableNavigation"  : true,
+		                "onAdjustHeight"    : function(theslider) {
+		                    //get available height
+		                    var aH = jQuery(window).innerHeight();
+		                    var top = jQuery(theslider.rt["scroller"]).position()["top"];
+		                    return aH-top;
+		                }
+		        });
 
-
-<footer class="footer-emp" id="contact" style="background-image:url(<?php echo get_stylesheet_directory_uri(); ?>/images/footer_bg.jpg);">
-    <div class="container-fluid">
-        <div class="row footer-top">
-            <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Form A Company</h2>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'    => 'form-a-company',
-                        'menu_class'        => 'links list-unstyled',
-                        'container'         => 'ul'
-                    )
-                );
-                ?>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Registration</h2>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'    => 'registeration',
-                        'menu_class'        => 'links list-unstyled',
-                        'container'         => 'ul'
-                    )
-                );
-                ?>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Taxation</h2>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'    => 'taxation',
-                        'menu_class'        => 'links list-unstyled',
-                        'container'         => 'ul'
-                    )
-                );
-                ?>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-0 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Others</h2>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'    => 'others',
-                        'menu_class'        => 'links list-unstyled',
-                        'container'         => 'ul'
-                    )
-                );
-                ?>
-            </div>
-        </div>
-        <div class="row footer-top">
-            <div class="col-lg-3 col-sm-6 mt-lg-3 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Quick Links</h2>
-                <?php
-                wp_nav_menu(
-                    array(
-                        'theme_location'    => 'quick-links',
-                        'menu_class'        => 'links list-unstyled',
-                        'container'         => 'ul'
-                    )
-                );
-                ?>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-3 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Delhi Office</h2>
-                <div class="contact-info">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location'    => 'delhi-address',
-                            'menu_class'        => 'links list-unstyled',
-                            'container'         => 'ul'
-                        )
-                    );
-                    ?>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-3 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Noida Office</h2>
-                <div class="contact-info">
-                    <?php
-                    wp_nav_menu(
-                        array(
-                            'theme_location'    => 'office-address',
-                            'menu_class'        => 'links list-unstyled',
-                            'container'         => 'ul'
-                        )
-                    );
-                    ?>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6 mt-lg-3 mt-5">
-                <h2 class="footer-title text-white mb-lg-4 mb-4">Social Contacts</h2>
-                <div class="contact-info">
-                   <a href="#" class="social-link"><i class="fa fa-facebook"></i></a>
-                   <a href="#" class="social-link"><i class="fa fa-twitter"></i></a>
-                   <a href="#" class="social-link"><i class="fa fa-linkedin"></i></a>
-                   <a href="#" class="social-link"><i class="fa fa-instagram"></i></a>
-                   <a href="#" class="social-link"><i class="fa fa-skype"></i></a>
-                   <a href="#" class="social-link"><i class="fa fa-youtube"></i></a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="copy-right-top border-top">
-        <p class="copy-right text-center"> <a href="<?php echo get_page_link(1495) ?>">
-        Term &amp; Condition </a> 
-        <span style="color: white;">| and |</span><a href="<?php echo get_page_link(1497) ?>">
-        Privacy Policy </a> |<span style="color: white;">
-        Copyright <i class="fa fa-copyright"></i> 2020 | Design &amp; Develop By </span> <a href="https://techmarketz.com/" style=" font-weight: 700;
-  text-transform: uppercase;
-  
-}">Techmarketz</a></p>
-    </div>
-</footer>
-
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-3.3.1.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/bootstrap.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/webslidemenu.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/slick.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.min.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/Swiper.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom-swiper2.js"></script>
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/custom.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+		        jQuery(".xp-custom-navigation").on("click", function() {
+		            slider.forward();
+		            return false;
+		        });
+				jQuery(".layer-action-link").on("click", function() {
+                    slider.forward();
+                    return false;
+		        });
+		    }
+			);
+	</script>
 </body>
-<?php
-echo $GLOBALS['response'];
-?>
-
 </html>
+
       </xmp>
     </div>
 
      <div class="container" style="border : 1px solid #000; margin-top : 50px">
       <h3>index.php</h3>
       <xmp>
-        <?php
-
+       <?php
 /**
  * Template Name: Home
  */
 get_header(); ?>
-<!-- -------------------------------- -->
+	<!-- BEGIN HOME SLIDER -->
+	<div class="xpro-slider-container video-background">
+				 <div id="scroller" class="xpro-slider">
+						 <div class="xpro-slider-content">
 
-<section class="banner">
-  <div class="slider">
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <?php while (have_rows('slider_items')) : the_row(); ?>
-          <div class="swiper-slide">
-            <div class="slide-inner">
-              <figure class="video">
-                <div class="video-embed embed-responsive embed-responsive-16by9">
-                  <video width="1920" autoplay="" loop="" muted="" playsinline="" class="embed-responsive-item video-embed-item">
-                    <source src="<?php the_sub_field('video'); ?>" type="video/mp4">
-                  </video>
-                </div>
-              </figure>
-              <!--<div class="slide-image" style="background-image:url(images/banner_bg.jpg)"></div>-->
-              <div class="swiper-content">
-                <div class="row justify-content-center">
-                  <div class="col-lg-7">
-                    <div class="section_tittle text-right">
-                      <h1><a style="text-decoration: none;color: #ff7907;" href="<?php the_sub_field('url'); ?>"><?php the_sub_field('header_title'); ?></a></h1>
-                      <h2><?php the_sub_field('header_sub_title'); ?></h2>
-                    </div>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="p_services text-left">
-                      <ul>
-                        <?php while (have_rows('points')) : the_row(); ?>
-                          <li><?php the_sub_field('point'); ?></li>
-                        <?php endwhile; ?>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <a href="<?php the_sub_field('url'); ?>" class="biz-btn">VIEW MORE</a>
-              </div>
-              <!--<div class="overlay"></div>-->
-            </div>
-          </div>
-        <?php endwhile; ?>
-      </div>
-      <!-- Add Arrows -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-</section>
+								<!--ON Slider Item -->
+							<?php while (have_rows('banner')) : the_row(); ?>
+								 <div class="xpro-slider-item" style="background-image:url(<?php the_sub_field('banner'); ?>);background-position:right center">
+
+										 <div class="xpro-item-layer p-slide-overlay" data-effect="animate({'delay':'0.5s', 'duration':'1s'})"></div>
+
+										 <div class="xpro-item-layer p-intro-box" data-effect="animate({'Y':'20px', zoom:'in', 'delay':'1s', 'duration':'600ms'})">
+												 <div class="logointro">
+														 <img src="<?php the_sub_field('banner_logo'); ?>" alt="" />
+												 </div>
+										 </div>
+
+										 <div class="xpro-item-layer p-text-box" data-effect="animate({'Y':'20px', zoom:'in', 'delay':'1.6s', 'duration':'600ms'})">
+												 <h1 class="xpro-item-layer-responsive xp-headtext"><?php the_sub_field('title'); ?></h1>
+												 <div class="xpro-item-layer-responsive xp-headsubtext">
+														<?php the_sub_field('sub_title'); ?>
+												 </div>
+										 </div>
+
+								 </div> 
+							<?php endwhile; ?>
+								 <!--OFF Slider Item -->
+						 </div>
+				 </div>
+		 </div>
+	<!-- END HOME SLIDER -->
+
+		<!-- BEGIN ABOUT US  -->
+	<?php while (have_rows('about')) : the_row(); ?>
+		<section class="about-us">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="section-title"><?php the_sub_field('title'); ?></h2>
+						<div class="section-subtitle"><?php the_sub_field('sub_title'); ?></div>
+						<hr>
+						<h3 class="section-title-border text-uppercase"><?php the_sub_field('title_2'); ?></h3>
+
+						<div class="col-sm-6 pad100">
+							<div class="content">
+									<p class="first-letter"><?php the_sub_field('content'); ?></p>
+							</div>
+							<div class="signatured-box">
+								<span class="signatured"><img src="<?php the_sub_field('signature'); ?>" alt=""></span>
+							</div>
+						</div>
+						<div class="col-sm-6 pad100">
+							 <div class="content">
+								<img src="<?php the_sub_field('image'); ?>" alt="">
+							 </div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+	</section>
+<?php endwhile; ?>
+		<!-- END ABOUT -->
+
+		<!-- BEGIN SPECIAL MENU  -->
+		<section class="special-menu parallax-box">
+			<div class="mediaSection-box">
+				<div class="container">
+					<div class="row">
+							<div class="owl-carousel special-menu-slider"> <!-- On special-menu list  -->
+								<?php 
+									$args = array(  
+									        'post_type' => 'custompost',
+									        'post_status' => 'publish',
+									        'posts_per_page' => 4, 
+									        'order' => 'ASC',
+									    );
+
+									    $loop = new WP_Query( $args ); 
+									        
+									    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+								<div class="item-frame-box">
+									<div class="item-bg-box">
+										<div class="image"><img src=<?php the_post_thumbnail(); ?></div>
+										<div class="info">
+											<h3 class="section-title-border text-uppercase"><?php the_title(); ?></h3>
+											<p><?php the_excerpt(); ?></p>
+											<span class="item-price">$39</span>
+											<a href="<?php the_permalink(); ?>" class="btn btn-primary-gray">Order Now</a>
+										</div>
+									</div>
+								</div>
+
+ 									<?php endwhile; 
+										wp_reset_postdata(); ?>
 
 
 
-<!-- --------------------------------------- -->
-<div class="row justify-content-center my-2">
-        <div class="col-lg-12">
-          <div class="section_tittle text-center">
-            <h2>Our Consultancy</h2>
-            <p>
-            </p>
-          </div>
-        </div>
-      </div>
-<section class="about-us mb-250 rmb-90">
-  <div class="container-fluid">   
-    <div class="row align-items-center pb-10">
-      <div class="col-lg-5">
-        <div class="about-image-wrap rmb-50">
-          <div class="about-video">
-            <img src="<?php the_field('about_image_1'); ?>" alt="About Video">
-          </div>
-          <div class="about-image">
-            <img src="<?php the_field('about_image_2'); ?>" alt="About image">
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <div class="about-content ml-30 rml-0">
-          <div class="section-title mb-35">
+							
+								
 
-            <h2><?php the_field('about_title'); ?></h2>
-          </div>
-          <?php while (have_rows('about_links')) : the_row(); ?>
-          <ul>
-              
-          <li><a href="<?php the_sub_field('url'); ?>"> <?php the_sub_field('title'); ?></a></li>
-      
-          </ul>
-          <?php endwhile; ?>
-          
-          
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<?php if (have_rows('our_services')) :  ?>
-  <div class="row justify-content-center my-4">
-        <div class="col-lg-12">
-          <div class="section_tittle text-center">
-            <h2>Our Services</h2>
-          </div>
-        </div>
-      </div>
-  <section class="service_block_section" style="background-image: url('<?php the_field('our_services_background'); ?>');">
-    <div class="container">
-      
-      <div class="service_block">
-        <div class="service_block_list">
-          <ul class="service_list">
-              <li class="service_box1">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/private-limited-company-registration/" class="service_link_icon"><i class="fa fa-building"></i></a>
-                  <div class="service_category">
-                    <p>COMPANY REGISTRATION</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box2">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/gst-registration/" class="service_link_icon"><i class="fa fa-file-text"></i></a>
-                  <div class="service_category">
-                    <p>GST REGISTRATION</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box3">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/drug-license/" class="service_link_icon"><i class="fa fa-plus-square"></i></a>
-                  <div class="service_category">
-                    <p> DRUGS  LICENSE</p>
-                  </div>
-                </div>
-              </li>
-              
-              <li class="service_box4">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/ngo-registration-procedure/" class="service_link_icon"><i class="fa fa-handshake-o"></i></a>
-                  <div class="service_category">
-                    <p>NGO REGISTRATION</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box5">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/fssai-product-approval/" class="service_link_icon"><i class="fa fa-file-code-o"></i></a>
-                  <div class="service_category">
-                    <p>FSSAI PRODUCT APPROVAL</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box6">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/private-limited-company-registration/" class="service_link_icon"><i class="fa fa-trademark"></i></a>
-                  <div class="service_category">
-                    <p>TRADEMARK REGISTRATION</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box7">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/iso-certificate/" class="service_link_icon"><i class="fa fa-pencil-square-o"></i></a>
-                  <div class="service_category">
-                    <p>ISO CERTIFICATE</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box8">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/file-income-tax-return-online/" class="service_link_icon"><i class="fa fa-inr"></i></a>
-                  <div class="service_category">
-                    <p>INCOME TAX RETURN</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box9">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/msme-ssi-registration/" class="service_link_icon"><i class="fa fa-sitemap"></i></a>
-                  <div class="service_category">
-                    <p>MSME/SSI REGISTRATION</p>
-                  </div>
-                </div>
-              </li>
-              <li class="service_box10">
-                <div class="service_grid">
-                  <a href="http://legaladvisory.org/food-safety-training-and-certification/" class="service_link_icon"><i class="fa fa-money"></i></a>
-                  <div class="service_category">
-                    <p>FOOD SAFETY SUPERVISOR</p>
-                  </div>
-                </div>
-              </li>
-          </ul>
-          
-          
-          <div class="service_block_link justify-content-center">
-            <a href="<?php echo get_page_link(1456) ?>" class="service_link_btn">See Other Services <i class="fa fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
+							</div><!-- OFF special-menu list  -->
+						</div>
 
-<?php if (have_rows('knowledge_portal_items')) :  ?>
-  <section class="section_padding Knowledge_area img_style1 bg_clr1">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12">
-          <div class="section_tittle text-center">
-            <h2><?php the_field('knowledge_portal_title'); ?></h2>
-            <p>
-              <?php the_field('knowledge_portal_sub_title'); ?>
-            </p>
-          </div>
-        </div>
-      </div>
+					</div><!-- Off row  -->
+				</div>
+			</div>
+		</section>
+		<!-- END SPECIAL MENU  -->
 
-      <div class="row">
-        <?php while (have_rows('knowledge_portal_items')) : the_row(); ?>
-          <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-sms-10 col-xs-12 offset-lg-1 col_ml">
-            <div class="item_box bg-white box_shadow">
-              <div class="row justify-content-center display-flex">
-                <div class="img_post">
-                  <div class="image_wrap">
-                    <figure class="td_img" style="background-image:url(<?php the_sub_field('image'); ?>);"></figure>
-                  </div>
-                </div>
-                <div class="col-xl-10 col-lg-9 col-md-12 col-sm-7 col-xs-10 box_ml offset-lg-2 offset-xs-2">
-                  <div class="txt_box">
-                    <h4><?php the_sub_field('title'); ?></h4>
-                    <p class="text-justify">
-                      <?php the_sub_field('description'); ?>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <?php endwhile; ?>
-      </div>
-    </div>
-  </section>
+		<!-- MENU OF THE DAY -->
+		<section class="menu-list-section">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<h2 class="section-title"><?php the_field('day_menu'); ?></h2>
+						<div class="section-subtitle"><?php the_field('day_menu_subtitle'); ?></div>
+						<hr>
 
-<?php endif; ?>
+						<ul class="menu-button-filter edit-marginTop40">
+								<li data-filter="*" class="tagsort-active">
+									<div class="iconBox-icon center-block"><i class="glyph-icon flaticon-bell"></i></div>
+									<span class="r-name">All</span></li>
 
-<section class="chooseus-style-two bg-color-1">
-  <div class="container">
-    <div class="inner-content">
-      <div class="image-box">
-        <figure class="image image-1">
-          <a href="#"><img src="<?php the_field('why_choose_us_image_1'); ?>" alt=""></a>
-        </figure>
-        <figure class="image image-2">
-          <a href="#"><img src="<?php the_field('why_choose_us_image_2'); ?>" alt=""></a>
-        </figure>
-      </div>
-      <div class="row clearfix">
-        <div class="col-xl-8 col-lg-7 col-md-12 content-column offset-xl-4 offset-lg-5">
-          <div class="content-box clearfix">
-            <div class="sec-title">
-              <div class="title-two">
-                <p><span></span>&nbsp;<?php the_field('why_choose_us_title'); ?>&nbsp;<span></span></p>
-              </div>
-              <h3><?php the_field('why_choose_us_sub_title'); ?></h3>
-            </div>
-            <?php if (have_rows('why_choose_us_points')) :  ?>
-              <div class="inner-box">
-                <?php while (have_rows('why_choose_us_points')) : the_row(); ?>
-                  <div class="single-item">
-                    <div class="icon-box"><i class="flaticon-diamond"></i></div>
-                    <h4><?php the_sub_field('point'); ?></h4>
-                  </div>
-                <?php endwhile; ?>
-              </div>
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+				<?php while (have_rows('day_menu_title')) : the_row(); ?>
 
-<?php if (have_rows('testimonials_items')) :  ?>
+								<li data-filter=".<?php the_sub_field('title'); ?>" class="">
+									<div class="iconBox-icon center-block"><i class="glyph-icon flaticon-<?php the_sub_field('icon'); ?>"></i></div>
+									<span class="r-name"><?php the_sub_field('title'); ?></span></li>
+								<?php endwhile; ?>
 
-  <section class="section_padding tesimonial_bg">
-    <div class="container">
-      <div class="cateWatch top_seller">
-        <div class="row justify-content-center">
-          <div class="col-xl-6">
-            <div class="section_tittle text-center">
-              <h2><?php the_field('testimonials_title'); ?></h2>
-              <p><?php the_field('testimonials_sub_title'); ?></p>
-            </div>
-          </div>
-        </div>
+	
+							</ul>
+							<div class="row menu-items-list">
+				<?php while (have_rows('day_menu_items')) : the_row(); ?>
+									<div class="menu-item col-sm-6 col-xs-12 <?php the_sub_field('main_title'); ?>">
+										<div class="clearfix menu-wrapper">
+											<h3 class="title manuscript"><?php the_sub_field('title'); ?></h3>
+											<span class="price">$ <?php the_sub_field('price'); ?></span>
+											<div class="desc"><p><?php the_sub_field('content'); ?></p></div>
+										</div>
+									</div>
+									
+								</div>
+					</div>
+					<?php endwhile; ?>
+				</div>
+			</div>
+	</section>
+	<!-- END MENU OF THE DAY -->
 
-        <div class="row">
-          <div class="col-xs-12 col-md-12">
-            <div class="test">
-              <?php while (have_rows('testimonials_items')) : the_row(); ?>
-                <div>
-                  <div class="content_box">
-                    <figure>
-                      <img src="<?php the_sub_field('image'); ?>" alt="">
-                    </figure>
-                    <div class="name_wrap">
-                      <h4><?php the_sub_field('name'); ?></h4>
-                      <h5><?php the_sub_field('position'); ?></h5>
-                    </div>
-                    <div class="content_text">
-                      <p>
-                        <?php the_sub_field('review'); ?>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              <?php endwhile; ?>
-            </div>
-          </div>
-        </div>
-        <div class="clearfix"> </div>
-      </div>
-    </div>
-  </section>
+	<!-- RESERVATION NOW  -->
+	<section class="reservation-now parallax-box">
+		<div class="mediaSection-box">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-xs-12">
+						<div class="reservation-form-box">
+							<h3 class="title manuscript">Book Your Table</h3>
+							<h2 class="section-title-border">Reservation Now</h2>
 
-<?php endif; ?>
+							<form method="post" id="reservation-form" name="reservation-form" class="reservation-form form-margin" action="reservation.php">
+								<div class="form-group"> <!-- Name field !-->
+									<input type="text" class="form-control" id="rv-name" name="rv-name" placeholder="Full Name">
+								</div>
+								<div class="form-group"> <!-- Phone field !-->
+									<input type="number" class="form-control" id="rv-phone" name="rv-phone" placeholder="Your Phone Number">
+								</div>
+								<div class="form-group"> <!-- Email field !-->
+									<input type="email" class="form-control" id="rv-email" name="rv-email" placeholder="Your Email">
+								</div>
+								<div class="form-group"> <!-- Guests field !-->
+									<input type="number" class="form-control" id="rv-guests" name="rv-guests" min="1" placeholder="Guests">
+								</div>
+								<div class="form-group"> <!-- Date field !-->
+									<div class="input-group date" id="dp-date">
+			                <input type="text" id="rv-date" class="form-control" placeholder="Date" name="rv-date">
+			                <span class="input-group-addon">
+			                    <span class="glyphicon glyphicon-calendar">
+			                    </span>
+			                </span>
+			            </div>
+								</div>
+								<div class="form-group"> <!-- Time field !-->
+									<div class="input-group date" id="dp-time">
+                    <input type="text" id="rv-time" class="form-control" name="rv-time" placeholder="Time">
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-time"></span>
+	                  </span>
+	                </div>
+								</div>
 
-<?php if (have_rows('faq_items')) :  ?>
-  <section id="faq" class="section_padding page_wrapper faq_section bg_clr1">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-6">
-          <div class="section_tittle text-center">
-            <h2><?php the_field('faq_title'); ?></h2>
-          </div>
-        </div>
-      </div>
+								<div class="center-button edit-marginTop30"> <!-- Submit button !-->
+									<input type="submit" name="rv-submit" id="rv-submit" class="btn btn-primary btn-sm" value="Reserver Now">
+								</div>
+							</form>
+								<div id="rv-message"></div>
+						</div>
+					</div>
+					<div class="col-sm-6 col-xs-12">
+						<div class="time-clock-box">
+							<span class="top-frames"></span>
+							<span class="bottom-frames"></span>
+							<ul id="clock">
+							  <li id="sec"></li>
+							  <li id="hour"></li>
+							  <li id="min"></li>
+							</ul>
+						</div>
+					</div>
+				</div><!-- /.row -->
+			</div><!-- /.container -->
+		</div>
+	</section>
+	<!-- END RESERVATION NOW  -->
 
-      <div class="row">
-        <div class="col-xl-12 col-lg-12 col-md-12">
-          <div class="faq-info">
-            <ul class="faq">
-              <?php while (have_rows('faq_items')) : the_row(); ?>
-                <li>
-                  <a href="#" class=""><?php the_sub_field('question'); ?><span class="icon"></span></a>
-                  <div class="faq_content">
-                    <p>
-                      <?php the_sub_field('answer'); ?>
-                    </p>
-                  </div>
-                </li>
-              <?php endwhile; ?>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
+	<!-- RESERVATION CALL  -->
+	<section class="call-reservation">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<div class="call-box">
+						<h3 class="title">You can also call to make a reservation.</h3>
+						<span class="phone"><?php the_field('order_number'); ?></span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- END RESERVATION CALL -->
 
-<?php if (have_rows('partners_items')) :  ?>
-  <section class="section_padding client_section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-xl-6">
-          <div class="section_tittle text-center">
-            <h2><?php the_field('partners_title'); ?></h2>
-            <h4><?php the_field('partners_sub_title'); ?></h4>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="service-grids client-slider owl-carousel">
-            <?php while (have_rows('partners_items')) : the_row(); ?>
-              <div class="grid">
-                <div class="icon">
-                  <img src="<?php the_sub_field('image'); ?>" alt="Yokohama">
-                </div>
-              </div>
-            <?php endwhile; ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-<?php endif; ?>
-<?php get_footer(); ?>
+<!-- BEGIN TESTIMONIALS  -->
+		<section class="testimonials parallax-box">
+			<div class="mediaSection-box">
+				<div class="container">
+						<div class="owl-carousel owl-testimonials"> <!-- On testimonials slide  -->
+							<?php 
+									$args = array(  
+									        'post_type' => 'testimonial',
+									        'post_status' => 'publish',
+									        'posts_per_page' => 4, 
+									        'order' => 'ASC',
+									    );
+
+									    $loop = new WP_Query( $args ); 
+									        
+									    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+								<div class="item-bg-box"><!-- On item  -->
+									<div class="thumb-section">
+											<img src=<?php the_post_thumbnail(); ?>
+										<h3 class="name"><?php the_title(); ?></h3>
+										<div class="town"><?php the_excerpt(); ?></div>
+									</div>
+									<div class="desc">
+											<p><i class="fa fa-quote-left"></i><?php the_content(); ?><i class="fa fa-quote-right"></i></p>
+									</div>
+								</div><!-- OFF item  -->
+								<?php endwhile; 
+										wp_reset_postdata(); ?>
+						</div><!-- OFF Testimoials slide  -->
+				</div>
+			</div>
+		</section>
+		<!-- END TESTIMONIALS  -->
+		      <?php get_footer(); ?>
       </xmp>
+    <div class="container" style="border : 1px solid #000; margin-top : 50px">
+      <h3>functions.php</h3>
+         <xmp>
+           <?php
+
+// add_theme_support('post-thumbnails', array('post'));          // Posts only
+// add_theme_support('post-thumbnails', array('page'));
+add_theme_support( 'post-thumbnails' );
+add_theme_support('menus');
+ add_theme_support( 'custom-logo');
+/**
+ * Proper way to enqueue scripts and styles
+ */
+function wpdocs_theme_name_scripts() {
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/js/example.js', array(), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+
+
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'header-menu' => __( 'Header Menu' ),
+      'extra-menu' => __( 'Extra Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
+
+
+add_action( 'widgets_init', 'my_register_sidebars' );
+function my_register_sidebars() {
+    /* Register the 'footer 1' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'footer-1',
+            'name'          => __( 'Footer Widget 1' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+        /* Register the 'footer 1' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'footer-2',
+            'name'          => __( 'Footer Widget 2' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+        /* Register the 'footer 1' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'footer-3',
+            'name'          => __( 'Footer Widget 3' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+        /* Register the 'footer 1' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'footer-4',
+            'name'          => __( 'Footer Widget 4' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+     /* Register the 'footer 1' sidebar. */
+    register_sidebar(
+        array(
+            'id'            => 'copyright',
+            'name'          => __( 'Copyright' ),
+            'description'   => __( 'A short description of the sidebar.' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => '</div>',
+            'before_title'  => '<h3 class="widget-title">',
+            'after_title'   => '</h3>',
+        )
+    );
+    /* Repeat register_sidebar() code for additional sidebars. */
+
+}
+require get_template_directory() . '/inc/single-post.php';
+require get_template_directory() . '/inc/testimonial.php';
+
+
+$excerpt = get_the_excerpt(); 
+ 
+$excerpt = substr( $excerpt, 0, 20 ); // Only display first 20 characters of excerpt
+$result = substr( $excerpt, 0, strrpos( $excerpt, ' ' ) );
+echo $result;
+
+
+/**
+ * Add HTML5 theme support.
+ */
+function wpdocs_after_setup_theme() {
+    add_theme_support( 'html5', array( 'search-form' ) );
+}
+add_action( 'after_setup_theme', 'wpdocs_after_setup_theme' );
+         </xmp>
+     </div>
+  <div class="container" style="border : 1px solid #000; margin-top : 50px">
+      <h3>single.php</h3>
+         <xmp>
+           <?php
+/**
+ * Template Name: Single
+ */
+get_header(); ?>
+
+		<!-- BEGIN HEADER BACKGROUND -->
+		<div class="header-background-box half">
+			<div class="header-background">
+				<div class="webkit-and-moz-overlay-background">
+					<div class="container">
+						<div class="center-section">
+							<h2 class="section-title-border whiteTitleBorder"><?php the_title(); ?></h2>
+							<div class="section-subtitle"><?php the_excerpt(); ?></div>
+						</div>
+					</div>
+				</div>
+			</div>
+						<?php the_post_thumbnail(); ?>
+
+		</div>
+		<!-- END HEADER BACKGROUND -->
+<div class="price-content edit-marginTop20">
+								<h3 class="price-title"><?php the_title(); ?></h3>
+								<p><?php the_content(); ?></p>
+								<div class="embed-container">
+									<iframe src="<?php the_field('video_url'); ?>" width="560" height="350" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+		
+		<div class="container">
+			<?php if (is_single ()) comments_template (); ?>
+
+</div>
+
+		<!-- BEGIN FEATURED RECIPIE  -->
+		<section class="featured-recipe">
+				<div class="container">
+					<h3 class="section-title-border">Featured Recipe</h3>
+					<div class="owl-carousel owl-featured-recipe">
+								<?php 
+									$args = array(  
+									        'post_type' => 'post',
+									        'post_status' => 'publish',
+									        'posts_per_page' => 4, 
+									        'order' => 'ASC',
+									    );
+
+									    $loop = new WP_Query( $args ); 
+									        
+									    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<div class="item-box"><!-- ON item  -->
+							<div class="thumb-img">
+								<?php the_post_thumbnail(); ?>
+								<div class="thumb-title">John Parkinson <small>Senor Chef</small></div>
+							</div>
+							<div class="item-main-section">
+								<div class="item-img">
+									<div class="view-image"> <?php the_post_thumbnail(); ?></div>
+								</div>
+								<div class="main-desc">
+									<h3 class="item-title"><?php the_title(); ?></h3>
+									<div class="description">
+										<?php the_excerpt(); ?>	
+									</div>
+									<div class="button-section">
+										<a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm">View Details</a>
+									</div>
+									<div class="bd-ratings">
+										<ul class="star-box">
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div><!-- OFF item  -->
+						<?php endwhile; 
+										wp_reset_postdata(); ?>
+
+					</div>
+			</div>
+		</section>
+		<!-- END FEATURED RECIPIE -->
+<?php get_footer(); ?>
+         </xmp>
+     </div>
+  <div class="container" style="border : 1px solid #000; margin-top : 50px">
+      <h3>custompost.php</h3>
+         <xmp>
+           <?php
+/**
+ * Template Name: Custom Post
+ */
+get_header(); ?>
+
+		<!-- BEGIN HEADER BACKGROUND -->
+		<div class="header-background-box half">
+			<div class="header-background">
+				<div class="webkit-and-moz-overlay-background">
+					<div class="container">
+						<div class="center-section">
+							<h2 class="section-title-border whiteTitleBorder"><?php the_title(); ?></h2>
+							<div class="section-subtitle"><?php the_excerpt(); ?></div>
+						</div>
+					</div>
+				</div>
+			</div>
+						<?php the_post_thumbnail(); ?>
+
+		</div>
+		<!-- END HEADER BACKGROUND -->
+<div class="price-content edit-marginTop20">
+								<h3 class="price-title"><?php the_title(); ?></h3>
+								<p><?php the_content(); ?></p>
+								<div class="embed-container">
+									<iframe src="<?php the_field('video_url'); ?>" width="560" height="350" frameborder="0" allowfullscreen></iframe>
+								</div>
+							</div>
+		
+		<div class="container">
+			<?php if (is_single ()) comments_template (); ?>
+
+</div>
+
+		<!-- BEGIN FEATURED RECIPIE  -->
+		<section class="featured-recipe">
+				<div class="container">
+					<h3 class="section-title-border">Featured Recipe</h3>
+					<div class="owl-carousel owl-featured-recipe">
+								<?php 
+									$args = array(  
+									        'post_type' => 'post',
+									        'post_status' => 'publish',
+									        'posts_per_page' => 4, 
+									        'order' => 'ASC',
+									    );
+
+									    $loop = new WP_Query( $args ); 
+									        
+									    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<div class="item-box"><!-- ON item  -->
+							<div class="thumb-img">
+								<img src="<?php the_post_thumbnail(); ?>">
+								<div class="thumb-title">John Parkinson <small>Senor Chef</small></div>
+							</div>
+							<div class="item-main-section">
+								<div class="item-img">
+									<div class="view-image" data-image-src="<?php the_post_thumbnail(); ?>"></div>
+								</div>
+								<div class="main-desc">
+									<h3 class="item-title"><?php the_title(); ?></h3>
+									<div class="description">
+										<?php the_excerpt(); ?>	
+									</div>
+									<div class="button-section">
+										<a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm">View Details</a>
+									</div>
+									<div class="bd-ratings">
+										<ul class="star-box">
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star active"></i></li>
+											<li><i class="fa fa-star"></i></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div><!-- OFF item  -->
+						<?php endwhile; 
+										wp_reset_postdata(); ?>
+
+					</div>
+			</div>
+		</section>
+		<!-- END FEATURED RECIPIE -->
+<?php get_footer(); ?>
+         </xmp>
+     </div>
+  <div class="container" style="border : 1px solid #000; margin-top : 50px">
+      <h3>archive.php</h3>
+         <xmp>
+           <?php
+/*
+Template Name: Archives
+*/
+get_header(); ?>
+
+<div id="container">
+	<div id="content" role="main">
+
+		<?php the_post(); ?>
+		<h1 class="entry-title"><?php the_title(); ?></h1>
+		
+		<?php get_search_form(); ?>
+		
+		<h2>Archives by Month:</h2>
+		<ul>
+			<?php wp_get_archives('type=monthly'); ?>
+		</ul>
+		
+		<h2>Archives by Subject:</h2>
+		<ul>
+			 <?php wp_list_categories(); ?>
+		</ul>
+
+	</div><!-- #content -->
+</div><!-- #container -->
+
+<?php get_sidebar(); ?>
+<?php get_footer(); ?>
+         </xmp>
+     </div><div class="container" style="border : 1px solid #000; margin-top : 50px">
+      <h3>search.php</h3>
+         <xmp>
+           <?php
+/**
+ * The template for displaying Search Results pages.
+ *
+ * @package Shape
+ * @since Shape 1.0
+ */
+
+get_header(); ?>
+<br>
+<br>
+
+
+<?php
+    global $query_string;
+    $query_args = explode("&", $query_string);
+    $search_query = array();
+
+    foreach($query_args as $key => $string) {
+      $query_split = explode("=", $string);
+      $search_query[$query_split[0]] = urldecode($query_split[1]);
+    } // foreach
+
+    $the_query = new WP_Query($search_query);
+    if ( $the_query->have_posts() ) : 
+    ?>
+    <!-- the loop -->
+
+       <div class="container">
+       	<div class="row">
+    <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+      
+       		<div class="col-sm-12 col-md-6 col-lg-4 col-xl-4">
+								<div class="post-item-single">
+									<div class="item-bg-box">
+										<div class="image"><?php the_post_thumbnail(); ?></div>
+										<div class="info">
+											<h3 class="section-title-border text-uppercase"><?php the_title(); ?></h3>
+											<p><?php the_excerpt(); ?></p>
+<!-- 											<span class="item-price">$39</span>
+ -->											<a href="<?php the_permalink(); ?>" class="btn btn-primary-gray">Order Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+			 
+    <?php endwhile; ?>
+    			</div>
+
+       </div>
+   
+    <!-- end of the loop -->
+
+    <?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+        <?php get_footer(); ?>
+
+         </xmp>
+     </div>
+  <div class="container" style="border : 1px solid #000; margin-top : 50px">
+      <h3>404.php</h3>
+         <xmp>
+           <?php
+/**
+ * The template for displaying 404 pages (Not Found)
+ *
+ * @package WordPress
+ * @subpackage Twenty_Thirteen
+ * @since Twenty Thirteen 1.0
+ */
+
+get_header(); ?>
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			<header class="page-header">
+				<h1 class="page-title"><?php _e( 'Not Found', 'twentythirteen' ); ?></h1>
+			</header>
+
+			<div class="page-wrapper">
+				<div class="page-content">
+					<h2><?php _e( 'This is somewhat embarrassing, isn’t it?', 'twentythirteen' ); ?></h2>
+					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentythirteen' ); ?></p>
+
+					<?php get_search_form(); ?>
+				</div><!-- .page-content -->
+			</div><!-- .page-wrapper -->
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+<?php get_footer(); ?>
+         </xmp>
+     </div>
+  
  
 
 
